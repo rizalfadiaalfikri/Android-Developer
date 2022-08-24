@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">05_ViewPager</string>
+    <string name="diablo">Diablo</string>
+    <string name="zegion">Zegion</string>
+    <string name="benimaru">Benimaru</string>
+    <string name="testarossa">Testarossa</string>
+    <string name="carrera">Carrera</string>
+    <string name="ultima">Ultima</string>
+    <string name="shion">Shion</string>
+    <string name="ranga">Ranga</string>
+    <string name="kumara">Kumara</string>
+    <string name="adalman">Adalman</string>
+    <string name="gabiruiablo">Gabiru</string>
+    <string name="gerudo">Gerudo</string>
+</resources>
