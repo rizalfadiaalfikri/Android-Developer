@@ -1,6 +1,7 @@
 package com.rizalfadiaalfikri.a04_recyclerview;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
@@ -35,6 +37,15 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
         holder.title.setText(models.get(position).title);
         holder.rank.setText(models.get(position).rank);
         holder.image.setImageResource(models.get(position).image);
+
+        holder.cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, DetailActivity.class);
+                context.startActivity(intent);
+            }
+        });
+
     }
 
     @Override
@@ -45,6 +56,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
     public class MyViewHolder extends RecyclerView.ViewHolder {
         TextView name,title,rank;
         ImageView image;
+        CardView cardView;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
@@ -52,7 +64,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
             title = itemView.findViewById(R.id.txt_title);
             rank = itemView.findViewById(R.id.rank);
             image = itemView.findViewById(R.id.imageView);
-
+            cardView = itemView.findViewById(R.id.cardView);
         }
     }
 }
